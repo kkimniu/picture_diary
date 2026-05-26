@@ -1,0 +1,40 @@
+{
+  "scenes": [
+    {
+      "scene_id": 1,
+      "scene_kr": "어두운 비구름 아래 버스 정류장에 사람들이 우산을 쓰고 줄 서 있었다",
+      "shot": "WS",
+      "angle": "eye-level",
+      "lighting": "soft",
+      "lens": "24mm",
+      "prompt_en": "people standing with umbrellas at a rainy bus stop under dark rain clouds, wide shot, eye-level, soft light, 24mm, quiet rainy morning mood"
+    },
+    {
+      "scene_id": 2,
+      "scene_kr": "젖은 도로 위에 버스 불빛이 흐리게 반사되고 있었다",
+      "shot": "MS",
+      "angle": "low",
+      "lighting": "rim",
+      "lens": "35mm",
+      "prompt_en": "bus lights reflecting softly on a wet road, medium shot, low angle, rim light, 35mm, gloomy rainy street mood"
+    },
+    {
+      "scene_id": 3,
+      "scene_kr": "사람들 대부분이 고개를 숙인 채 스마트폰 화면만 바라보고 있었다",
+      "shot": "MS",
+      "angle": "eye-level",
+      "lighting": "backlit",
+      "lens": "50mm",
+      "prompt_en": "people looking down at smartphone screens while waiting at a rainy bus stop, medium shot, eye-level, backlit, 50mm, silent morning mood"
+    },
+    {
+      "scene_id": 4,
+      "scene_kr": "차가운 아침 공기 속에서 우산 끝에서 빗방울이 계속 떨어지고 있었다",
+      "shot": "CU",
+      "angle": "high",
+      "lighting": "soft",
+      "lens": "85mm",
+      "prompt_en": "raindrops falling from the tip of an umbrella in cold morning air, close-up, high angle, soft light, 85mm, calm rainy mood"
+    }
+  ]
+}
