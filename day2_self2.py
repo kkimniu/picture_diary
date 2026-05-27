@@ -7,13 +7,13 @@ import fal_client
 
 
 def load_keys() -> None:
-    """.env에서 FAL_KEY와 OPENAPI_API_KEY를 로드합니다."""
+    """.env에서 FAL_KEY와 OPENAI_API_KEY를 로드합니다."""
     # 여기에 load_dotenv() 호출 + os.getenv("FAL_KEY") 가져오기 + 첫 5자 마스킹 출력을 채워요.
     load_dotenv()
     api_key: str | None = os.getenv("FAL_KEY")
     # 힌트: FAL_KEY가 없으면 fal-client가 작동하지 않아요.
     # 힌트: print(f"FAL_KEY: {key[:5]}...") 형태로 마스킹 출력해요.
-    print(f"환경확인 | OPENAPI_API_KEY 첫 12자: {api_key[:5] if api_key else 'None - .env 위치 확인 필요!!!'}")
+    print(f"환경확인 | OPENAI_API_KEY 첫 12자: {api_key[:5] if api_key else 'None - .env 위치 확인 필요!!!'}")
     pass
 
 

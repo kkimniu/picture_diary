@@ -26,17 +26,17 @@ def submit_kling(image_url: str, prompt: str, duration: int = 5) -> str:
 # status_kling, result_kling 함수는 self2에서 작성
 # agents/video.py (이어쓰기 — submit_kling 아래에 추가)
 
-def status_kling(request_id: str) -> str:
+async def status_kling(request_id: str) -> str:
     """Kling status 1회 조회. 상태 문자열 반환."""
     # 여기에 fal_client.status_async(KLING_MODEL, request_id, with_logs=False)를 호출하고
     #   status 객체의 status 필드(예: "IN_PROGRESS", "COMPLETED")를 반환하는 코드를 채워요.
-    status = fal_client.status_async(KLING_MODEL, request_id, with_logs=False)
-    return status.__name__
+    status = await fal_client.status_async(KLING_MODEL, request_id, with_logs=False)
+    return type(status).__name__
 
-def result_kling(request_id: str) -> str:
+async def result_kling(request_id: str) -> str:
     """Kling 완료된 영상 결과 받기. 영상 URL 반환."""
     # 여기에 fal_client.result_async(KLING_MODEL, request_id)를 호출하고
     #   result["video"]["url"]을 반환하는 코드를 채워요.
     # 힌트: Kling 응답 구조는 result["video"]["url"] (DALL-E·FLUX와 다름).
-    result = fal_client.result_async(KLING_MODEL, request_id)
+    result = await fal_client.result_async(KLING_MODEL, request_id)
     return result["video"]["url"]

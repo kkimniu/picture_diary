@@ -32,9 +32,9 @@ def extract_scenes(diary_text: str) -> list[dict]:
     # ) 호출 코드를 채워요.
     # 여기에 json.loads(response.choices[0].message.content)["scenes"] 반환 코드를 채워요.
     load_dotenv()
-    api_key = os.getenv("OPENAPI_API_KEY가") or os.getenv("OPENAPI_API_KEY")
+    api_key = os.getenv("OPENAPI_API_KEY가") or os.getenv("OPENAI_API_KEY")
     if not api_key:
-        raise RuntimeError("OPENAPI_API_KEY가 .env에 없습니다.")
+        raise RuntimeError("OPENAI_API_KEY가 .env에 없습니다.")
     client = OpenAI(api_key=api_key)
     response =client.chat.completions.create(
         model="gpt-4o-mini",

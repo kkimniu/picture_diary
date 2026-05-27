@@ -221,3 +221,5 @@ __marimo__/
 outputs/*.mp4
 *.png
 .DS_Store
+
+kling_task_id.txt

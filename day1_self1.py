@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 def load_api_key() -> str:
     """`.env`에서 OPENAI_API_KEY를 로드하고 마스킹한 키 첫 5자를 출력합니다."""
     load_dotenv()
-    api_key = os.getenv("OPENAPI_API_KEY", "")
+    api_key = os.getenv("OPENAI_API_KEY", "")
     print(f"[API KEY] {api_key[:5]}*****")
     return api_key
 
