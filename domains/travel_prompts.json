@@ -1,0 +1,35 @@
+{
+  "domain": "travel",
+  "version": "day5-self1",
+  "prompt_style": {
+    "shot": "wide shot",
+    "angle": "eye-level angle",
+    "lighting": "soft natural lighting",
+    "lens_or_style": "watercolor travel journal illustration",
+    "mood": "quiet rainy city morning"
+  },
+  "scenes": [
+    {
+      "id": "scene_01",
+      "diary_sentence": "비 오는 아침 버스 정류장에서 사람들이 조용히 줄을 서 있었다.",
+      "visual_focus": "rainy bus stop and people with umbrellas",
+      "prompt_addons": [
+        "wet road reflection",
+        "gloomy cloudy sky",
+        "cinematic rainy atmosphere"
+      ],
+      "negative_prompt": "blurry image, distorted body, low quality, watermark"
+    },
+    {
+      "id": "scene_02",
+      "diary_sentence": "젖은 도로 위에 버스 불빛이 흐리게 비치고 있었다.",
+      "visual_focus": "bus light reflection on wet road",
+      "prompt_addons": [
+        "soft rainy lighting",
+        "quiet city morning",
+        "travel diary mood"
+      ],
+      "negative_prompt": "low resolution, text, deformed hands, oversaturated colors"
+    }
+  ]
+}

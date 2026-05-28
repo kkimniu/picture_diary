@@ -34,3 +34,14 @@
 
 - 내일은 pipeline()을 제품/이모티콘/여행 도메인 중 하나에 응용할 예정이다.
 - cost_report.md를 이용해 이미지·영상 생성 비용을 기록한다.
+
+## Day 5 self1
+
+- 선택 도메인: travel
+- seed A/B: 42 / 123
+- A 호출 수: 3
+- B 호출 수: 3
+- p95_latency_s: ___
+- cost_per_image: ___
+- total_cost_usd: ___
+- 다음 작업: README 운영 지표 표에 위 값을 반영

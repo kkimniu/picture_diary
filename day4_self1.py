@@ -5,7 +5,7 @@ import fal_client
 
 from agents.video import submit_kling
 
-IMAGE_PATH = Path("outputs") / "2026-05-27" / "scene_1.png"
+IMAGE_PATH = Path("outputs") / "2026-05-28" / "scene_1.png"
 # 여기에 image_path를 fal.ai 임시 URL로 업로드하는 코드를 채워요.
 # 힌트: fal_client.upload_file(str(IMAGE_PATH))는 fal.ai 임시 URL을 반환.
 url = fal_client.upload_file(str(IMAGE_PATH))

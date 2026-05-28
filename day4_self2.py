@@ -10,6 +10,7 @@ import asyncio
 from pipeline import picture_diary_pipeline
 
 load_dotenv()
+
 async def main():
     task_id = Path("kling_task_id.txt").read_text().strip()
     iteration = 0
@@ -43,10 +44,11 @@ async def main():
         output_path.write_bytes(requests.get(video_url).content)
 
     print(f"self1에서 받은 task_id: {task_id}")
+    
+    diary_text = Path("diary.md").read_text(encoding="utf-8")
+    # 여기에 picture_diary_pipeline(diary_text, animate_first=False)를 호출하고
+    # 결과를 출력하는 코드를 채워요.
+    result = await picture_diary_pipeline(diary_text,animate_first=False)
+    print(f"picture_diary_pipeline의 결과값{result}")
 
-diary_text = Path("diary.md").read_text(encoding="utf-8")
-# 여기에 picture_diary_pipeline(diary_text, animate_first=False)를 호출하고
-# 결과를 출력하는 코드를 채워요.
-result = asyncio.run(picture_diary_pipeline(diary_text,animate_first=False))
-
-print(result)
+asyncio.run(main())
