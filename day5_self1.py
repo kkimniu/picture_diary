@@ -64,6 +64,26 @@ def main() -> None:
     # 여기에 5일 누적 비용 표를 문자열로 만들어요
     # 여기에 P95 지연 섹션을 문자열로 만들어요
     # 여기에 report_path에 markdown을 저장하는 코드를 채워요
+    IMAGE_COST_USD = 0.04
+    VIDEO_COST_USD = 0.20
+
+    day1_calls = 1
+    day2_calls = 1
+    day3_calls = 4
+    day4_calls = 1
+    day5_calls = N_CALLS * 2
+
+    day1_cost = day1_calls * IMAGE_COST_USD
+    day2_cost = day2_calls * IMAGE_COST_USD
+    day3_cost = day3_calls * IMAGE_COST_USD
+    day4_cost = day4_calls * VIDEO_COST_USD
+    day5_cost = day5_calls * IMAGE_COST_USD
+
+    total_calls = day1_calls + day2_calls + day3_calls + day4_calls + day5_calls
+    total_cost_usd = day1_cost + day2_cost + day3_cost + day4_cost + day5_cost
+
+    cost_per_image = IMAGE_COST_USD
+    p95_latency_s = max(p95_a, p95_b)
 
     report = f"""# 그림일기 파이프라인 5일 누적 비용 보고서
 
@@ -81,12 +101,12 @@ def main() -> None:
 
     | Day | 주요 작업 | 호출 수 | 단가 또는 추정 단가 | 합계 |
     |---|---|---:|---:|---:|
-    | Day 1 | 환경 확인과 첫 호출 | ___ | $___ | $___ |
-    | Day 2 | 장면 JSON 생성 | ___ | $___ | $___ |
-    | Day 3 | 이미지 생성 | ___ | $___ | $___ |
-    | Day 4 | 영상 생성 | ___ | $___ | $___ |
-    | Day 5 self1 | 도메인 A/B 테스트 | ___  | $___ | $___ |
-    | 합계 |  | ___ |  | $___ |
+    | Day 1 | 환경 확인과 첫 호출 | {day1_calls} | ${IMAGE_COST_USD:.2f} | ${day1_cost:.2f} |
+    | Day 2 | 장면 JSON 생성/FLUX 테스트 | {day2_calls} | ${IMAGE_COST_USD:.2f} | ${day2_cost:.2f} |
+    | Day 3 | 이미지 생성 | {day3_calls} | ${IMAGE_COST_USD:.2f} | ${day3_cost:.2f} |
+    | Day 4 | 영상 생성 | {day4_calls} | ${VIDEO_COST_USD:.2f} | ${day4_cost:.2f} |
+    | Day 5 self1 | 도메인 A/B 테스트 | {day5_calls} | ${IMAGE_COST_USD:.2f} | ${day5_cost:.2f} |
+    | 합계 |  | {total_calls} |  | ${total_cost_usd:.2f} |
 
     ## P95 지연
 
@@ -99,9 +119,9 @@ def main() -> None:
 
     | 항목 | 값 |
     |---|---:|
-    | p95_latency_s | ___ |
-    | cost_per_image | ___ |
-    | total_cost_usd | ___ |
+    | p95_latency_s | {p95_latency_s:.2f} |
+    | cost_per_image | ${cost_per_image:.2f} |
+    | total_cost_usd | ${total_cost_usd:.2f} |
     """
 
     report_path.write_text(report, encoding="utf-8")
