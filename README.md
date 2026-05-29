@@ -1,3 +1,5 @@
+로컬 실행 시 생성됨
+
 # 글로 쓰는 그림일기 — Picture Diary
 일기 텍스트를 4장면 이미지와 영상으로 변환하는 멀티 AI 파이프라인 프로젝트입니다.
 
@@ -12,18 +14,15 @@ python pipeline.py
 ![scene\_1](outputs/2026-05-28/scene_1.png)
 
 ## 운영 지표
-(cost_report.md에서 가져온 표 — 학생이 채움)
 | Day | 모델 | 호출 수 | 합계 |
-|---|---|---:|---:|
-<!-- # 여기에 5일 비용 표를 채워요 -->
+|-------------|----------------------|-----:|------:|
 | Day 1       | gpt-image-1          |    1 | $0.04 |
 | Day 2       | FLUX schnell         |    1 | $0.04 |
 | Day 3       | gpt-image-1.5 / FLUX |    4 | $0.16 |
 | Day 4       | Kling image-to-video |    1 | $0.20 |
 | Day 5 self1 | FLUX A/B test        |    6 | $0.24 |
-| 합계         |                      |   13 | $0.68 |
+| 합계         |                     |   13 | $0.68 |
 ## A/B 테스트 요약
-<!-- # 여기에 ab_test_results.json의 seed, p95_a, p95_b 값을 채워요 -->
 * 선택 도메인: travel
 * seed A: 42
 * seed B: 137
@@ -44,6 +43,7 @@ travel 도메인을 선택하여
 picture_diary/
 ├── pipeline.py
 ├── agents/
+│   ├──__init__.py
 │   ├── scene.py
 │   ├── image.py
 │   └── video.py
@@ -57,5 +57,4 @@ picture_diary/
 ```
 ## 라이선스
 <!-- # 여기에 라이선스를 채워요 (예: MIT) -->
-
 MIT

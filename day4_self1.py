@@ -1,11 +1,11 @@
 # day4_self1.py — Kling 영상 submit 1회 시범
 from pathlib import Path
-
 import fal_client
-
 from agents.video import submit_kling
+from datetime import date
 
-IMAGE_PATH = Path("outputs") / "2026-05-28" / "scene_1.png"
+today = date.today().isoformat()
+IMAGE_PATH = Path("outputs") / today / "scene_1.png"
 # 여기에 image_path를 fal.ai 임시 URL로 업로드하는 코드를 채워요.
 # 힌트: fal_client.upload_file(str(IMAGE_PATH))는 fal.ai 임시 URL을 반환.
 url = fal_client.upload_file(str(IMAGE_PATH))

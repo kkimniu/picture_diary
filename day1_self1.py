@@ -24,9 +24,9 @@ def build_scene_prompt() -> str:
 
 
 def generate_image(client: OpenAI, prompt: str) -> str:
-    """gpt-image-1로 이미지 1장 생성, URL을 반환합니다."""
+    """gpt-image-1.5로 이미지 1장 생성, URL을 반환합니다."""
     response = client.images.generate(
-        model="gpt-image-1",
+        model="gpt-image-1.5",
         prompt=prompt,
         size="1024x1024",
         n=1

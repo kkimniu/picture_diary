@@ -14,9 +14,9 @@ COMMON_STYLE = (
 )  # ← 캐릭터 일관성 어휘 (§2에서 정한 화풍·색·인물 표현 1줄)
 
 def call_dalle(client: OpenAI, prompt: str) -> str:
-    """DALL-E 3로 1장 생성, URL 반환."""
+    """gpt-image-1.5로 1장 생성, URL 반환."""
     # 여기에 OpenAI() 클라이언트 + client.images.generate(...) 호출 코드를 채워요.
-    # 힌트: DALL-E 3는 seed 인자를 직접 받지 않으므로 prompt에 "seed: N" 텍스트로 표현하거나 무시.
+    # 힌트: gpt-image-1.5 는 seed 인자를 직접 받지 않으므로 prompt에 "seed: N" 텍스트로 표현하거나 무시.
     full_prompt = prompt
     result = client.images.generate(
         model="gpt-image-1.5",
