@@ -11,7 +11,7 @@ python pipeline.py
 ```
 
 ## 결과 미리보기
-![scene\_1](outputs/2026-05-28/scene_1.png)
+![scene\_1](outputs/2026-05-29/scene_1.mp4)
 
 ## 운영 지표
 | Day | 모델 | 호출 수 | 합계 |

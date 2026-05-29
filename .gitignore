@@ -223,3 +223,10 @@ outputs/*.mp4
 .DS_Store
 
 kling_task_id.txt
+
+.env
+.venv/
+outputs/
+*.png
+*.mp4
+__pycache__/
